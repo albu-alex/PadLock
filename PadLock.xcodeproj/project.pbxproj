@@ -14,6 +14,8 @@
 		DC8591042A0E2AD100013554 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8591032A0E2AD100013554 /* Colors.swift */; };
 		DC85910B2A0E479C00013554 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC85910A2A0E479C00013554 /* ContentViewModel.swift */; };
 		DCB04C4A2A0E631A00A5292B /* SwiftNFC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB04C492A0E631A00A5292B /* SwiftNFC.swift */; };
+		DCB04C4C2A0EB1E000A5292B /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB04C4B2A0EB1E000A5292B /* HTTPClient.swift */; };
+		DCB04C4E2A0ECEF100A5292B /* AddPassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB04C4D2A0ECEF100A5292B /* AddPassView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		DC8591062A0E45A900013554 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DC85910A2A0E479C00013554 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		DCB04C492A0E631A00A5292B /* SwiftNFC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftNFC.swift; sourceTree = "<group>"; };
+		DCB04C4B2A0EB1E000A5292B /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		DCB04C4D2A0ECEF100A5292B /* AddPassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPassView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 				DC8590FB2A0E245C00013554 /* Preview Content */,
 				DC8591032A0E2AD100013554 /* Colors.swift */,
 				DC85910A2A0E479C00013554 /* ContentViewModel.swift */,
+				DCB04C4D2A0ECEF100A5292B /* AddPassView.swift */,
 			);
 			path = PadLock;
 			sourceTree = "<group>";
@@ -84,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				DCB04C492A0E631A00A5292B /* SwiftNFC.swift */,
+				DCB04C4B2A0EB1E000A5292B /* HTTPClient.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -164,6 +170,8 @@
 			files = (
 				DC85910B2A0E479C00013554 /* ContentViewModel.swift in Sources */,
 				DC8590F82A0E245800013554 /* ContentView.swift in Sources */,
+				DCB04C4E2A0ECEF100A5292B /* AddPassView.swift in Sources */,
+				DCB04C4C2A0EB1E000A5292B /* HTTPClient.swift in Sources */,
 				DC8591042A0E2AD100013554 /* Colors.swift in Sources */,
 				DC8590F62A0E245800013554 /* PadLockApp.swift in Sources */,
 				DCB04C4A2A0E631A00A5292B /* SwiftNFC.swift in Sources */,

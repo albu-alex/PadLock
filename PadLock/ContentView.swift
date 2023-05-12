@@ -26,12 +26,18 @@ struct ContentView: View {
             Button("Write") {
                 viewModel.write()
             }
+            Button("Read") {
+                viewModel.read()
+            }
             Spacer()
             AddPassToWalletButton {
-                viewModel.read()
+                viewModel.addToWallet()
             }
             .frame(height: 60)
             .padding(.horizontal, 28)
+            .sheet(isPresented: $viewModel.isPassAdded) {
+                AddPassView(pass: viewModel.pkPass!)
+            }
         }
         .padding()
         .background(Colors.lightBlue)
