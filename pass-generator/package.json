@@ -1,0 +1,26 @@
+{
+  "name": "pass-generator",
+  "version": "1.0.0",
+  "description": "A basic node.js project used to generate passes for wallets",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/albu-alex/PadLock.git"
+  },
+  "keywords": [
+    "Pass",
+    "generators"
+  ],
+  "author": "Alex Albu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/albu-alex/PadLock/issues"
+  },
+  "homepage": "https://github.com/albu-alex/PadLock#readme",
+  "dependencies": {
+    "passkit-generator": "^3.1.9"
+  }
+}

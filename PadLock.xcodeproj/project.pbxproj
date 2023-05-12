@@ -11,6 +11,9 @@
 		DC8590F82A0E245800013554 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8590F72A0E245800013554 /* ContentView.swift */; };
 		DC8590FA2A0E245C00013554 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC8590F92A0E245C00013554 /* Assets.xcassets */; };
 		DC8590FD2A0E245C00013554 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC8590FC2A0E245C00013554 /* Preview Assets.xcassets */; };
+		DC8591042A0E2AD100013554 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8591032A0E2AD100013554 /* Colors.swift */; };
+		DC85910B2A0E479C00013554 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC85910A2A0E479C00013554 /* ContentViewModel.swift */; };
+		DCB04C4A2A0E631A00A5292B /* SwiftNFC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB04C492A0E631A00A5292B /* SwiftNFC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,11 @@
 		DC8590F72A0E245800013554 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DC8590F92A0E245C00013554 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC8590FC2A0E245C00013554 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DC8591032A0E2AD100013554 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		DC8591052A0E300000013554 /* PadLock.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PadLock.entitlements; sourceTree = "<group>"; };
+		DC8591062A0E45A900013554 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		DC85910A2A0E479C00013554 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		DCB04C492A0E631A00A5292B /* SwiftNFC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftNFC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +59,15 @@
 		DC8590F42A0E245800013554 /* PadLock */ = {
 			isa = PBXGroup;
 			children = (
+				DCB04C482A0E630D00A5292B /* Utils */,
+				DC8591062A0E45A900013554 /* Info.plist */,
+				DC8591052A0E300000013554 /* PadLock.entitlements */,
 				DC8590F52A0E245800013554 /* PadLockApp.swift */,
 				DC8590F72A0E245800013554 /* ContentView.swift */,
 				DC8590F92A0E245C00013554 /* Assets.xcassets */,
 				DC8590FB2A0E245C00013554 /* Preview Content */,
+				DC8591032A0E2AD100013554 /* Colors.swift */,
+				DC85910A2A0E479C00013554 /* ContentViewModel.swift */,
 			);
 			path = PadLock;
 			sourceTree = "<group>";
@@ -65,6 +78,14 @@
 				DC8590FC2A0E245C00013554 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DCB04C482A0E630D00A5292B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DCB04C492A0E631A00A5292B /* SwiftNFC.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +104,8 @@
 			dependencies = (
 			);
 			name = PadLock;
+			packageProductDependencies = (
+			);
 			productName = PadLock;
 			productReference = DC8590F22A0E245800013554 /* PadLock.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +134,8 @@
 				Base,
 			);
 			mainGroup = DC8590E92A0E245800013554;
+			packageReferences = (
+			);
 			productRefGroup = DC8590F32A0E245800013554 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +162,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC85910B2A0E479C00013554 /* ContentViewModel.swift in Sources */,
 				DC8590F82A0E245800013554 /* ContentView.swift in Sources */,
+				DC8591042A0E2AD100013554 /* Colors.swift in Sources */,
 				DC8590F62A0E245800013554 /* PadLockApp.swift in Sources */,
+				DCB04C4A2A0E631A00A5292B /* SwiftNFC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,7 +223,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -249,7 +277,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -264,12 +292,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PadLock/PadLock.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PadLock/Preview Content\"";
-				DEVELOPMENT_TEAM = G22R3G9GQ9;
+				DEVELOPMENT_TEAM = AG8L3BUBFE;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PadLock/Info.plist;
+				INFOPLIST_KEY_NFCReaderUsageDescription = "Use NFC to read and write data.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -280,7 +311,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.hackathon.PadLock;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yonder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -293,12 +324,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PadLock/PadLock.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PadLock/Preview Content\"";
-				DEVELOPMENT_TEAM = G22R3G9GQ9;
+				DEVELOPMENT_TEAM = AG8L3BUBFE;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PadLock/Info.plist;
+				INFOPLIST_KEY_NFCReaderUsageDescription = "Use NFC to read and write data.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -309,7 +343,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.hackathon.PadLock;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yonder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

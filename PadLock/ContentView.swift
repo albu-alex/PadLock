@@ -6,16 +6,35 @@
 //
 
 import SwiftUI
+import PassKit
 
 struct ContentView: View {
+    
+    @StateObject private var viewModel = ContentViewModel()
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Text("Welcome to PadLock")
+                .foregroundColor(Colors.pink)
+                .font(.title)
+                .bold()
+            Spacer()
+            Text(viewModel.reading)
+                .foregroundColor(Colors.blue)
+                .font(.body)
+            Spacer()
+            Button("Write") {
+                viewModel.write()
+            }
+            Spacer()
+            AddPassToWalletButton {
+                viewModel.read()
+            }
+            .frame(height: 60)
+            .padding(.horizontal, 28)
         }
         .padding()
+        .background(Colors.lightBlue)
     }
 }
 
