@@ -27,33 +27,45 @@ struct ContentView: View {
                     .padding(.all, 20)
                     .blur(radius: 10)
                 
-                Text(viewModel.reading)
-                    .foregroundColor(Colors.blue)
-                    .font(.body)
-                    .padding()
+                VStack(spacing: 80) {
+                    Text("NFC message recieved:")
+                        .foregroundColor(Colors.blue)
+                        .bold()
+                    
+                    Text(viewModel.reading)
+                        .foregroundColor(Colors.blue)
+                        .font(.body)
+                        .padding()
+                }
             }
             Spacer()
             
             VStack(spacing: 24) {
-                ActionButton(title: "Write", image: "square.and.arrow.down") {
+                ActionButton(title: "Write", image: "square.and.arrow.down", backgroundColor: Colors.pink) {
                     viewModel.write()
                 }
                 
-                ActionButton(title: "Read", image: "square.and.arrow.up") {
+                ActionButton(title: "Read", image: "square.and.arrow.up", backgroundColor: Colors.blue) {
                     viewModel.read()
                 }
                 
-                AddPassToWalletButton {
-                    viewModel.addToWallet()
+                if viewModel.isLoading {
+                    ProgressView()
                 }
-                .frame(height: 60)
-                .padding(.horizontal, 20)
-                .sheet(isPresented: $viewModel.isPassAdded) {
-                    AddPassView(pass: viewModel.pkPass!)
+                else {
+                    AddPassToWalletButton {
+                        viewModel.addToWallet()
+                    }
+                    .frame(height: 60)
+                    .padding(.horizontal, 20)
+                    .sheet(isPresented: $viewModel.isPassAdded) {
+                        AddPassView(pass: viewModel.pkPass!)
+                    }
                 }
             }
         }
         .padding()
+        .padding(.horizontal, 8)
         .background(Colors.lightBlue)
     }
 }

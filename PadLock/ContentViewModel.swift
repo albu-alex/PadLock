@@ -15,6 +15,7 @@ class ContentViewModel: ObservableObject {
     @Published var reading: String = "test"
     @Published var pkPass: PKPass?
     @Published var isPassAdded = false
+    @Published var isLoading = false
     
     func read() {
         nfcReader.read()
@@ -27,10 +28,15 @@ class ContentViewModel: ObservableObject {
     }
     
     func addToWallet() {
-        HTTPClient.get(url: URL(string: "https://yonder-hackathon-2023.azurewebsites.net/generate-pass")!) { [weak self] data, response, error in
+        isLoading = true
+        HTTPClient.get(url: URL(string: Environment.production + "/generate-pass")!) { [weak self] data, response, error in
             guard let self else { return }
             DispatchQueue.main.async {
                 self.pkPass = try? PKPass(data: data!)
+                self.isLoading = false
+            }
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                 self.isPassAdded = true
             }
         }

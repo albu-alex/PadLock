@@ -10,27 +10,29 @@ import SwiftUI
 struct ActionButton: View {
     let title: String
     let image: String
+    let backgroundColor: Color
     let action: () -> Void
     
     var body: some View {
         GeometryReader { geometry in
             Button(action: action) {
                 HStack {
-                    Image(systemName: image)
-                        .foregroundColor(.white)
-                    
                     Spacer()
+                    Image(systemName: image)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
 
                     Text(title)
-                        .font(.headline)
+                        .font(.title2)
+                        .fontWeight(.semibold)
                         .foregroundColor(.white)
                         .frame(height: 60)
+                    Spacer()
                 }
-                .padding(.horizontal, 92)
             }
-            .background(Colors.blue)
+            .background(backgroundColor)
             .cornerRadius(6)
-            .padding(.leading, 16)
+            .padding(.horizontal, 20)
         }
         .frame(height: 60)
     }
@@ -38,7 +40,7 @@ struct ActionButton: View {
 
 struct ActionButton_Previews: PreviewProvider {
     static var previews: some View {
-        ActionButton(title: "Add to Wallet", image: "square.and.arrow.up") {
+        ActionButton(title: "Add to Wallet", image: "square.and.arrow.up", backgroundColor: Colors.blue) {
             // Preview action
         }
         .previewLayout(.sizeThatFits)
