@@ -27,10 +27,12 @@ class ContentViewModel: ObservableObject {
     }
     
     func addToWallet() {
-        HTTPClient.get(url: URL(string: "http://localhost:3000/generate-pass")!) { [weak self] data, response, error in
+        HTTPClient.get(url: URL(string: "https://yonder-hackathon-2023.azurewebsites.net/generate-pass")!) { [weak self] data, response, error in
             guard let self else { return }
-            self.pkPass = try? PKPass(data: data!)
-            self.isPassAdded = true
+            DispatchQueue.main.async {
+                self.pkPass = try? PKPass(data: data!)
+                self.isPassAdded = true
+            }
         }
     }
 }

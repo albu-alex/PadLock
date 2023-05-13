@@ -14,29 +14,43 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Text("Welcome to PadLock")
+            Text("PadLock - Yonder")
                 .foregroundColor(Colors.pink)
                 .font(.title)
                 .bold()
             Spacer()
-            Text(viewModel.reading)
-                .foregroundColor(Colors.blue)
-                .font(.body)
+            
+            ZStack {
+                Colors.blue
+                    .cornerRadius(10)
+                    .opacity(0.1)
+                    .padding(.all, 20)
+                    .blur(radius: 10)
+                
+                Text(viewModel.reading)
+                    .foregroundColor(Colors.blue)
+                    .font(.body)
+                    .padding()
+            }
             Spacer()
-            Button("Write") {
-                viewModel.write()
-            }
-            Button("Read") {
-                viewModel.read()
-            }
-            Spacer()
-            AddPassToWalletButton {
-                viewModel.addToWallet()
-            }
-            .frame(height: 60)
-            .padding(.horizontal, 28)
-            .sheet(isPresented: $viewModel.isPassAdded) {
-                AddPassView(pass: viewModel.pkPass!)
+            
+            VStack(spacing: 24) {
+                ActionButton(title: "Write", image: "square.and.arrow.down") {
+                    viewModel.write()
+                }
+                
+                ActionButton(title: "Read", image: "square.and.arrow.up") {
+                    viewModel.read()
+                }
+                
+                AddPassToWalletButton {
+                    viewModel.addToWallet()
+                }
+                .frame(height: 60)
+                .padding(.horizontal, 20)
+                .sheet(isPresented: $viewModel.isPassAdded) {
+                    AddPassView(pass: viewModel.pkPass!)
+                }
             }
         }
         .padding()

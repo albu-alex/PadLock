@@ -16,6 +16,7 @@
 		DCB04C4A2A0E631A00A5292B /* SwiftNFC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB04C492A0E631A00A5292B /* SwiftNFC.swift */; };
 		DCB04C4C2A0EB1E000A5292B /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB04C4B2A0EB1E000A5292B /* HTTPClient.swift */; };
 		DCB04C4E2A0ECEF100A5292B /* AddPassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB04C4D2A0ECEF100A5292B /* AddPassView.swift */; };
+		DCB04C502A0EF6C900A5292B /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB04C4F2A0EF6C800A5292B /* ActionButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		DCB04C492A0E631A00A5292B /* SwiftNFC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftNFC.swift; sourceTree = "<group>"; };
 		DCB04C4B2A0EB1E000A5292B /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		DCB04C4D2A0ECEF100A5292B /* AddPassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPassView.swift; sourceTree = "<group>"; };
+		DCB04C4F2A0EF6C800A5292B /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			children = (
 				DCB04C492A0E631A00A5292B /* SwiftNFC.swift */,
 				DCB04C4B2A0EB1E000A5292B /* HTTPClient.swift */,
+				DCB04C4F2A0EF6C800A5292B /* ActionButton.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				DC8591042A0E2AD100013554 /* Colors.swift in Sources */,
 				DC8590F62A0E245800013554 /* PadLockApp.swift in Sources */,
 				DCB04C4A2A0E631A00A5292B /* SwiftNFC.swift in Sources */,
+				DCB04C502A0EF6C900A5292B /* ActionButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
